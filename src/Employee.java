@@ -21,7 +21,7 @@ class Employe{
 }
 public class Employee {
     public static void main(String[] args) {
-        ArrayList<Employee> earr = new ArrayList<Employee>();
+        ArrayList<Employe> earr = new ArrayList<Employe>();
         while (true) {
             System.out.println("Select an option \n 1 - Add an Employee \n 2 - View Employee \n 3 - Search an Employee \n" +
                     "4 - Delete an Employee \n 5 - Exit");
@@ -34,6 +34,28 @@ public class Employee {
             }
 
             switch (n) {
+
+                case 1:
+                    System.out.println("Enter employee details  ");
+                    Scanner obj = new Scanner(System.in);
+                    System.out.println("enter employee code");
+                    int ec = obj.nextInt();
+                    System.out.println("Enter employee name");
+                    String en = obj.next();
+                    System.out.println("employee designation");
+                    String ed = obj.next();
+                    System.out.println("Enter the salary");
+                    double es= obj.nextDouble();
+                    System.out.println("Enter company name");
+                    String cn = obj.next();
+                    System.out.println("Enter phn No");
+                    long pn= obj.nextLong();
+                    System.out.println("Enter email Id");
+                    String emid= obj.next();
+
+                    Employe e = new Employe(ec,en,ed,es,cn,pn,emid);
+                    earr.add(e);
+                    break;
 
             }
         }
